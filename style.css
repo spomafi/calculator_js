@@ -147,3 +147,40 @@ body::before {
 .calculator__operators__button, .comma {
     font-size: 1.3vw;
 }
+
+@media (max-width: 600px) {
+    .calculator__form {
+        width: 80vw;
+    }
+
+    .calculator__numbers {
+        height: 15vw;
+    }
+
+    .calculator__operators {
+        margin: 1vw 4vw 0;
+        height: 14vw;
+    }
+
+    .calculator__number,
+    .calculator__operators__button, 
+    .comma {
+        width: 10vw;
+        height: 5vw;
+        font-size: 4vw;
+    }
+
+    .reset,
+    .button {
+        width: 10vw;
+        height: 5vw;
+        font-size: 3vw;
+    }
+
+    .results {
+        height: 10vw;
+        margin-bottom: 3.5vw;
+        font-size: 4vw;
+        padding-top: 3vw;
+    }
+}

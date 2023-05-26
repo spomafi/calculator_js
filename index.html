@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="./normalize.css">
+    <link rel="stylesheet" type="text/css" href="./reset.css">
+</head>
+<body>
+    <main class="main">
+        <form class="calculator__form">
+            <h1 class="text-calculator">Calculator</h1>
+            <div class="calculator__numbers">
+                <button class="calculator__number" id="one">1</button>
+                <button class="calculator__number" id="two">2</button>
+                <button class="calculator__number" id="three">3</button>
+                <button class="calculator__number" id="four">4</button>
+                <button class="calculator__number" id="five">5</button>
+                <button class="calculator__number" id="six">6</button>
+                <button class="calculator__number" id="seven">7</button>
+                <button class="calculator__number" id="eight">8</button>
+                <button class="calculator__number" id="nine">9</button>
+                <button class="calculator__number" id="zero">0</button>
+            </div>
+            <div class="calculator__operators">
+                <button class="calculator__operators__button" id="plus">+</button>
+                <button class="calculator__operators__button" id="minus">-</button>
+                <button class="calculator__operators__button" id="mult">×</button>
+                <button class="calculator__operators__button" id="division">/</button>
+                <button class="calculator__operators__button" id="power">X<sup>x</sup></button>
+                <button class="comma" id="comma">.</button>
+                <button class="calculator__operators__button" id="root">√</button>
+            </div>
+            <div class="reset-container">
+                <button class="reset">C</button>
+            </div>
+            <div class="calculator__button">
+                <button class="button" id="submit">=</button>
+            </div>
+            <div class="results" id="results">
+                <div id="result" class="result"></div>
+                <div id="expression" class="expression"></div>
+            </div>
+        </form>
+    </main>
+    <script src="./script.js"></script>

@@ -77,24 +77,12 @@ submitButton.addEventListener("click", (event) => {
   if (curOperator !== "root" && !num2) return;
   let result;
   switch (curOperator) {
-    case "plus":
-      result = sum(num1, num2);
-      break;
-    case "minus":
-      result = minus(num1, num2);
-      break;
-    case "mult":
-      result = mult(num1, num2);
-      break;
-    case "division":
-      result = division(num1, num2);
-      break;
-    case "power":
-      result = power(num1, num2);
-      break;
-    case "root":
-      result = root(num1, num2);
-      break;
+    case "plus": result = sum(num1, num2); break;
+    case "minus": result = minus(num1, num2); break;
+    case "mult": result = mult(num1, num2); break;
+    case "division": result = division(num1, num2); break;
+    case "power": result = power(num1, num2); break;
+    case "root": result = root(num1, num2); break;
   }
   expression.innerHTML = result;
 });
@@ -112,4 +100,30 @@ comma.addEventListener("click", (event) => {
       expression.innerHTML += ".";
     }
   }
+});
+
+document.addEventListener("keydown", (event) => {
+	if(Number(event.key) >= 0 && Number(event.key) <= 9) {
+		if (curOperator) {
+			num2 += event.key;
+		} else {
+			num1 += event.key;
+		}
+		expression.innerHTML += event.key;
+	} else if (Object.keys(symbols).includes(event.key)) {
+		curOperator = symbols[event.key];
+		expression.innerHTML += event.key;
+	} else if (event.key === ".") {
+		if (curOperator) {
+			if (!num2.includes(".")) {
+				num2 += ".";
+				expression.innerHTML += ".";
+			} 
+		} else {
+			if (!num1.includes(".")) {
+				num1 += ".";
+				expression.innerHTML += ".";
+			}
+		}
+	}
 });
